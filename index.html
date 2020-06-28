@@ -23,7 +23,7 @@
           iusto similique amet illo iure nisi quisquam vero error! Laborum,
           ipsam fuga.
         </p>
-        <a href="#" class="play"
+        <a href="#" class="play" onclick="toggle()"
           ><img src="./pic/play.png" alt="" />Watch Trailer</a
         >
         <div class="slide"></div>
@@ -40,5 +40,23 @@
         </ul>
       </div>
     </div>
+    <div class="trailer">
+      <video src="" controls="true"></video>
+      <ion-icon name="power-outline" class="close"></ion-icon>
+      <img
+        src="https://image.flaticon.com/icons/png/512/25/25706.png"
+        class="close"
+        onclick="toggle()"
+      />
+    </div>
+    <script type="text/javascript">
+      function toggle() {
+        let trailer = document.querySelector(".trailer");
+        let video = document.querySelector("video");
+        trailer.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
   </body>
 </html>
